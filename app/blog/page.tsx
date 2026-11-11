@@ -1,7 +1,10 @@
+import { LatestPosts } from "../components/latest-posts";
+
 export default function Blog() {
   return (
-    <div>
-      <h1 className="text-2xl font-bold">Blog Page</h1>
-    </div>
+   <section>
+   <h1> Blog</h1>
+    <LatestPosts/>
+   </section>
   );
 }

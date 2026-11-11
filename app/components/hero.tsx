@@ -3,7 +3,7 @@ import profileImage from "../images/profile-image.png"
 
 export  function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen py-2">
+    <section className="flex flex-col items-center justify-center  py-2">
       <h1>
         Hi, I'm Jason! Welcome to my blog.
       </h1>

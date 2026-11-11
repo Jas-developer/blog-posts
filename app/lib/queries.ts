@@ -6,7 +6,8 @@ import { Category } from "./types";
 const client = new GraphQLClient(`${baseUrl}/graphql`);
 
 export async function getCategories(): Promise<Category[]> {
-    const query = gql`query getCategories {
+    "use cache";
+  const query = gql`query getCategories {
   categories(first: 100) {
     nodes {
       id
@@ -17,5 +18,6 @@ export async function getCategories(): Promise<Category[]> {
 }`;
 
 const data: { categories: { nodes: Category[] } } = await client.request(query);
+
 return data.categories.nodes;
 }
