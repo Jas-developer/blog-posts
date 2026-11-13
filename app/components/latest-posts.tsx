@@ -1,6 +1,15 @@
 import { SearchBar } from "./search-bar"
+import { Post } from "../lib/types";
 
-export function LatestPosts() {
+type LatestPostsProps = {
+    posts: Post[];
+    title?: string;
+    searchTerm?: string;
+    pageInfo: { startCursor: string | null ; endCursor: string | null; hasNextPage: boolean; hasPreviousPage: boolean; };
+    category?: string;
+}
+
+export function LatestPosts({ posts, title, searchTerm, pageInfo, category }: LatestPostsProps) {
     return(
         <div className="mb-8 ">
             <div>
